@@ -1,0 +1,42 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #333;
+    color: white;
+}
+
+.header_logo img {
+    max-width: 150px; /* Adjust based on your logo's size */
+    height: auto;
+}
+
+.header_nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav_item {
+    margin-left: 20px;
+}
+
+.header_inventory, .header_financing, .header_appointment, .header_goferinfo, .specials {
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.header_inventory:hover, .header_financing:hover, .header_appointment:hover, .header_goferinfo:hover, .specials:hover {
+    opacity: 0.8;
+}
+
+.header_goferinfo {
+    font-size: 12px; /* Smaller font size for address and phone number */
+    color: #ddd; /* Slightly dimmer color for legibility */
+}
+
+.specials {
+    color: #ff4500; /* Highlighted color for 'Specials' */
+}
