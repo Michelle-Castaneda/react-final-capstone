@@ -38,22 +38,24 @@ function Home () {
 review_id=""
 title=""
 rating={5}
-timestamp={date}
+timestamp={0}
 review="fdfd"
 />
 </div>
 <div className="review2">
-<Reviews review_id=""
+<Reviews 
+review_id=""
 title=""
 rating={5}
-timestamp={date}
+timestamp={0}
 review="fdfd"/>
 </div>
 <div className="review3">
-<Reviews review_id=""
+<Reviews 
+review_id=""
 title=""
 rating={5}
-timestamp={date}
+timestamp={0}
 review="fdfd"/>
 </div>
 
