@@ -15,9 +15,10 @@ function App() {
     <Router>
       <Header />
       <Routes>
-      <Route path="/" exact component={Home} />
-        <Route path="/reviews" component={Reviews} />
-        <Route path="/inventory" component={Inventory} />
+      <Route path="/" element={<Home />} />
+<Route path="/reviews" element={<Reviews />} />
+<Route path="/inventory" element={<Inventory />} />
+
       </Routes>
     </Router>
   );
