@@ -29,6 +29,7 @@ function ImageReel() {
         </div>
     
       </Slider>
+      <button className="schedule">Schedule a Test Drive</button>
     </div>
   );
 }

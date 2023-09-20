@@ -3,21 +3,22 @@ import "./Reviews.css";
 import car1 from "../ImageReel/Civic_Rojo.jpg"
 import StarIcon from '@mui/icons-material/Star';
 
-function Reviews (review_id,title,rating,timestamp,review) {
+function Reviews (props) {
+    const {review_id,title,rating,timestamp,review} = props
     return (
         <div>
           <div className="reviews">
             <div className="review_info">
-                <p className="review_title">{title}</p>
-                <p className="review _rating">
+                <div className="review_title">{title}</div>
+                <div className="review_rating">
                     {Array(rating)
                     .fill()
                     .map((_,i) => (
-                        <p><StarIcon /></p>
+                        <StarIcon key={i}/>
                     ))}
-                </p>
-                <p className="review_text">{review}</p>
-                <p className="review_timestamp">{timestamp}</p>
+                </div>
+                <div className="review_text">{review}</div>
+                <div className="review_timestamp">{timestamp}</div>
             </div>
            
           </div>
