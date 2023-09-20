@@ -17,6 +17,8 @@ function Inventory() {
 
       <div className="cardContainer">
         <InventoryCard />
+        <InventoryCard />
+        <InventoryCard />
       </div>
     </div>
   );
