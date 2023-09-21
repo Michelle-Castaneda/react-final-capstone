@@ -1,6 +1,4 @@
-
-
-.completeInventory {
+/* .completeInventory {
     font-family: Arial, sans-serif;
     padding: 20px;
     background-color: #f4f4f4;
@@ -47,4 +45,63 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+ */
 
+ /* Inventory.css */
+
+.completeInventory {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.advancedTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.advancedSearch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.advancedSearch input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    flex: 1; /* ensures equal width for all input fields */
+    min-width: 120px; /* set a minimum width */
+}
+
+.advancedBtn {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.advancedBtn:hover {
+    background-color: #0056b3;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+/* If you uncomment the cardRow styling */
+/* .cardRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+} */

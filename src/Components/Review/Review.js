@@ -1,20 +1,12 @@
 import React from "react";
-import "./Reviews.css";
-import car1 from "../ImageReel/Civic_Rojo.jpg"
+import "./Review.css";
+// import car1 from "../ImageReel/Civic_Rojo.jpg"
 import StarIcon from '@mui/icons-material/Star';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-function Reviews (props) {
-    const {review_id,title,rating,timestamp,review} = props
+
+function Review ({ title, rating, timestamp, review })  {
     return (
-        <div>
           <div className="reviews">
-          <h3 className="reviewsTitle">Recent Reviews</h3>
-<div className="navigationReviewBtn">
-<NavigateBeforeIcon />
-<NavigateNextIcon />
-</div>
             <div className="review_container">
             
                 <div className="review_title">{title}</div>
@@ -30,10 +22,7 @@ function Reviews (props) {
             </div>
            
           </div>
-
-
-        </div>
     )
 }
 
-export default Reviews;
+export default Review;

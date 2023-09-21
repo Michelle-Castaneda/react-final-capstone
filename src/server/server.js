@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path'); // Added this line
+const path = require('path');
 const app = express();
 
 app.use(cors());
@@ -19,22 +19,19 @@ app.get('/', async (req, res) => {
 //endpoints
 const {
     seed,
-    // getRoutine,
+    getCar,
     // getTasks,
     // createTask,
     // deleteTask,
     // updateTask
 } = require('./controller.js');
 
-// Uncomment if you want to use these:
-// app.post('/seed', seed);
-// app.get("/routine", getRoutine);
-// app.get("/tasks", getTasks);
+app.post('/seed', seed);
+app.get("/car_listing", getCar);
 // app.post("/tasks", createTask);
 // app.delete("/tasks/:task_id", deleteTask);
 // app.put("/tasks/:task_id", updateTask);
-
-const PORT = process.env.PORT
+const PORT = process.env.SERVER_PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
 import Home from "./Components/HomePage/Home";
-import Reviews from "./Components/Reviews/Reviews";
+import Review from "./Components/Review/Review";
 import Inventory from "./Components/Inventory/Inventory";
 
 //ICONS
@@ -15,10 +15,9 @@ function App() {
     <Router>
       <Header />
       <Routes>
-      <Route path="/" element={<Home />} />
-<Route path="/reviews" element={<Reviews />} />
-<Route path="/inventory" element={<Inventory />} />
-
+        <Route path="/" element={<Home />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/inventory" element={<Inventory />} />
       </Routes>
     </Router>
   );

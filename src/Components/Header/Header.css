@@ -1,42 +1,68 @@
-/* Header.css */
+.header_nav a, .header_logo a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header_nav a:hover, .header_logo a:hover {
+    color: #3498db; 
+}
+
+.header_nav a:visited, .header_logo a:visited {
+    color: white; 
+}
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #333;
+    background-color: gray;
     color: white;
+    flex-wrap: wrap;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .header_logo img {
-    max-width: 150px; /* Adjust based on your logo's size */
+    max-width: 150px;
     height: auto;
 }
 
-.header_nav {
-    display: flex;
-    gap: 20px;
-}
-
 .nav_item {
-    margin-left: 20px;
+    margin: 0 15px;
+    position: relative;
+    padding: 5px 0;
 }
 
-.header_inventory, .header_financing, .header_appointment, .header_goferinfo, .specials {
+.nav_item:hover {
+    color: #3498db; 
+}
+
+.header_home, .header_inventory, .header_financing, .header_appointment, .specials {
     cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-.header_inventory:hover, .header_financing:hover, .header_appointment:hover, .header_goferinfo:hover, .specials:hover {
-    opacity: 0.8;
-}
-
-.header_goferinfo {
-    font-size: 12px; /* Smaller font size for address and phone number */
-    color: #ddd; /* Slightly dimmer color for legibility */
+    transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 .specials {
-    color: #ff4500; /* Highlighted color for 'Specials' */
+    color: #e74c3c; 
+}
+
+.specials:hover {
+    color: #c0392b; 
+}
+
+.header_goferinfo {
+    font-size: 12px;
+    color: #bdc3c7; 
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    order: -1; 
 }

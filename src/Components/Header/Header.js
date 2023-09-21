@@ -11,22 +11,25 @@ function Header () {
           <Link to ="/" style={{textDecoration: "none"}}> 
              <div className="header_logo">
       <img src={logo} alt='gofer company logo'/>
+      <div className="nav_item">
+      <span className='header_home'>Home</span>
+      </div>
     </div>
     </Link>
-    <div className="header_nav">
 
-    <Link to="/inventory" >
+
+    <Link to="/inventory"style={{textDecoration: "none"}} >
     <div className="nav_item">
       <span className='header_inventory'>Inventory</span>
     </div>
     </Link>
 
-    <div className="nav_item">
+    <div className="nav_item"style={{textDecoration: "none"}}>
         <span className='header_financing'>Financing</span>
     </div>
   
     
-    <div className="nav_item">
+    <div className="nav_item"style={{textDecoration: "none"}}>
     <span className='header_appointment'>Request Appointment</span>
     </div>
 
@@ -45,8 +48,6 @@ function Header () {
   
     </div>
 
-
-        </div>
     )
 }
 

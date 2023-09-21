@@ -2,7 +2,10 @@ import React from "react";
 import "./Home.css";
 import SearchBar from "../SearchBar/SearchBar"
 import ImageReel from "../ImageReel/ImageReel";
-import Reviews from "../Reviews/Reviews";
+import Review from "../Review/Review";
+import Footer from "../Footer/Footer";
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 function Home() {
   return (
@@ -20,20 +23,25 @@ function Home() {
         <div className="introduction_title">A Decade of Trusted Experience</div>
 
         <div className="introduction_body">
-          Gofer Motors dealership offers an extensive range of top-quality used
+          Gofer Motors LLC offers an extensive range of top-quality used
           cars, each meticulously inspected and serviced to ensure our customers
           receive the best value for their investment. Our deep-rooted
           commitment to excellence, combined with our rich experience of over 10
           years, makes us the go-to choice for those looking for their next
-          vehicle. At Gofer Motors Car Dealership, we don't just sell cars; we
+          vehicle. At Gofer Motors LLC, we don't just sell cars; we
           sell trust, quality, and a lasting relationship.
         </div>
       </div>
 
       <div className="reviews_container">
+      <h3 className="reviewsTitle">Recent Reviews</h3>
+      <div className="navigationReviewBtn">
+<NavigateBeforeIcon />
+<NavigateNextIcon />
+</div>
         <div className="reviews_row">
           <div className="review1">
-            <Reviews
+            <Review
               review_id=""
               title=""
               rating={5}
@@ -42,7 +50,7 @@ function Home() {
             />
           </div>
           <div className="review2">
-            <Reviews
+            <Review
               review_id=""
               title=""
               rating={5}
@@ -51,7 +59,7 @@ function Home() {
             />
           </div>
           <div className="review3">
-            <Reviews
+            <Review
               review_id=""
               title=""
               rating={5}
@@ -61,6 +69,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
