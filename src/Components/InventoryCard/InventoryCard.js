@@ -7,14 +7,14 @@ function InventoryCard ({ car }) {
     return (
         <div className="car_card">
             <div className="car_info">
-                <p className="car_title">{car.Make} {car.Model}</p>
+                <p className="car_title">{car.make} {car.model}</p>
                 <img src={car1} className="carImageCard" alt="car"/>
-                <p className="car_make">{car.Make}</p>
-                <p className="car_model">{car.Model}</p>
-                <p className="car_price">{car.Price}</p>
-                <p className="car_year">{car.Year}</p>
-                <p className="car_downpayment">{car.Down_Payment}</p>
-                <p className="car_description">{car.Description}</p>
+                <p className="car_make">{car.make}</p>
+                <p className="car_model">{car.model}</p>
+                <p className="car_price">{car.price}</p>
+                <p className="car_year">{car.year}</p>
+                <p className="car_downpayment">{car.down_payment}</p>
+                <p className="car_description">{car.description}</p>
             </div>
             <button className="interested">Make an Appointment</button> 
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import car1 from "./Civic_Rojo.jpg"
 import car2 from "./car2.jpg"
@@ -12,7 +13,7 @@ function ImageReel() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000, // Change slide every 3 seconds
+    autoplaySpeed: 3000, 
   };
 
   return (
@@ -29,7 +30,9 @@ function ImageReel() {
         </div>
     
       </Slider>
+      <Link to="/appointment">
       <button className="schedule">Schedule a Test Drive</button>
+      </Link>
     </div>
   );
 }

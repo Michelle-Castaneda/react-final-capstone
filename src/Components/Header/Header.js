@@ -28,11 +28,11 @@ function Header () {
         <span className='header_financing'>Financing</span>
     </div>
   
-
-    <div className="nav_item"style={{textDecoration: "none"}}>
+<Link to="/appointment" style={{textDecoration: "none"}}>
+    <div className="nav_item">
     <span className='header_appointment'>Request Appointment</span>
     </div>
-
+    </Link>
 
     <div className="nav_item">
       <span className="specials">Specials</span>

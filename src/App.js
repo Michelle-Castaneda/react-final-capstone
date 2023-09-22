@@ -5,6 +5,7 @@ import Header from "./Components/Header/Header";
 import Home from "./Components/HomePage/Home";
 import Review from "./Components/Review/Review";
 import Inventory from "./Components/Inventory/Inventory";
+import Appointment from "./Components/Appointment/Appointment"
 
 //ICONS
 import "slick-carousel/slick/slick.css";
@@ -18,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/review" element={<Review />} />
         <Route path="/inventory" element={<Inventory />} />
-        {/* <Route path="/appointment" element={<Appointment />} /> */}
+        <Route path="/appointment" element={<Appointment />} />
       </Routes>
     </Router>
   );
