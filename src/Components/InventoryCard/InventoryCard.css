@@ -1,4 +1,4 @@
-/* .car_card {
+ .car_card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,64 +56,6 @@
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
-}
-
-.interested:hover {
-    background-color: #0056b3;
-} */
-
-
-
-.car_card {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 280px;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.car_card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.car_info {
-    padding: 16px;
-    background-color: #f7f7f7;
-}
-
-.car_title {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.carImageCard {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 12px;
-}
-
-.car_make,
-.car_model,
-.car_price,
-.car_year,
-.car_downpayment,
-.car_description {
-    font-size: 14px;
-    margin-bottom: 6px;
-}
-
-.interested {
-    display: block;
-    width: 100%;
-    padding: 10px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 0 0 8px 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
 }
 
 .interested:hover {

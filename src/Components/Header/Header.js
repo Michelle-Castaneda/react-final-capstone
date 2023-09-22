@@ -28,7 +28,7 @@ function Header () {
         <span className='header_financing'>Financing</span>
     </div>
   
-    
+
     <div className="nav_item"style={{textDecoration: "none"}}>
     <span className='header_appointment'>Request Appointment</span>
     </div>

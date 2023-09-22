@@ -15,14 +15,16 @@ module.exports = {
   seed: async (req, res) => {
     try {
         await sequelize.query(
-            `DROP TABLE IF EXISTS car_listing;
+            `
             DROP TABLE IF EXISTS user_reviews;
             DROP TABLE IF EXISTS contact_information;
+            DROP TABLE IF EXISTS car_listing;
 
             CREATE TABLE car_listing (
                 car_id SERIAL PRIMARY KEY,
                 Make varchar(100),
                 Model varchar(100),
+                Price integer,
                 Year integer,
                 Down_Payment integer,
                 Description text
@@ -46,10 +48,10 @@ module.exports = {
                 car_id integer REFERENCES car_listing(car_id)
             );
 
-            INSERT INTO car_listing (Make, Model, Year, Down_Payment, Description)
-            VALUES ('Buick', 'Verano', 2014, 2300, 'Clean Title'),
-                   ('Ford', 'Escape', 2016, 2800, 'Clean Title'),
-                   ('Ranger Rover', 'Evoque', 2013, 3500, 'Clean Title');
+            INSERT INTO car_listing (Make, Model, Price, Year, Down_Payment, Description)
+            VALUES ('Buick', 'Verano',20000, 2014, 2300, 'Clean Title'),
+                   ('Ford', 'Escape',15000, 2016, 2800, 'Clean Title'),
+                   ('Ranger Rover', 'Evoque',18000, 2013, 3500, 'Clean Title');
 
             INSERT INTO user_reviews(Rating, Review, Timestamp, review_title)
             VALUES (5, 'perfect condition', NULL, 'Bought my car yesterday');

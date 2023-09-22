@@ -20,17 +20,12 @@ app.get('/', async (req, res) => {
 const {
     seed,
     getCar,
-    // getTasks,
-    // createTask,
-    // deleteTask,
-    // updateTask
 } = require('./controller.js');
 
 app.post('/seed', seed);
 app.get("/car_listing", getCar);
-// app.post("/tasks", createTask);
-// app.delete("/tasks/:task_id", deleteTask);
-// app.put("/tasks/:task_id", updateTask);
+
+
 const PORT = process.env.SERVER_PORT || 3000;
 
 app.listen(PORT, () => {
