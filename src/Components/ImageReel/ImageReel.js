@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import Slider from "react-slick";
-import car1 from "./Civic_Rojo.jpg"
-import car2 from "./car2.jpg"
-import car3 from "./car3.jpg"
 
-function ImageReel() {
+import Slider from "react-slick";
+import Jeep_Cherokee from "./Jeep_Cherokee.jpg"
+import Buick_Encore from "./Buick_Encore.jpg"
+import Hyundai_Elantra from "./Hyundai_Elantra.jpg"
+
+
+function ImageReel({cars}) {
   const settings = {
     dots: true,
     infinite: true,
@@ -18,22 +19,19 @@ function ImageReel() {
 
   return (
     <div style={{ width: '80%', margin: '0 auto' }}>
-      <Slider {...settings}>
-        <div>
-          <img src={car1} alt="Car" />
+      <Slider {...settings}>         
+      <div>      
+           <img src={Jeep_Cherokee} alt="Car" />
         </div>
         <div>
-          <img src={car2} alt="car" />
+          <img src={Buick_Encore} alt="car" />
         </div>
         <div>
-          <img src={car3} alt="car" />
-        </div>
-    
+          <img src={Hyundai_Elantra} alt="car" />
+        </div>     
       </Slider>
-      <Link to="/appointment">
-      <button className="schedule">Schedule a Test Drive</button>
-      </Link>
-    </div>
+
+      </div>
   );
 }
 

@@ -23,10 +23,10 @@ module.exports = {
             CREATE TABLE car_listing (
                 car_id SERIAL PRIMARY KEY,
                 Make varchar(100),
-                Model varchar(100),
-                Price integer,
+                Model text,
+                Price text,
                 Year integer,
-                Down_Payment integer,
+                Down_Payment text,
                 Description text
             );
       
@@ -35,7 +35,7 @@ module.exports = {
                 car_id integer REFERENCES car_listing(car_id),
                 Rating integer,
                 Review text,
-                Timestamp timestamp,
+                Timestamp text,
                 review_title varchar(70)
             );
   
@@ -49,12 +49,25 @@ module.exports = {
             );
 
             INSERT INTO car_listing (Make, Model, Price, Year, Down_Payment, Description)
-            VALUES ('Buick', 'Verano',20000, 2014, 2300, 'Clean Title'),
-                   ('Ford', 'Escape',15000, 2016, 2800, 'Clean Title'),
-                   ('Ranger Rover', 'Evoque',18000, 2013, 3500, 'Clean Title');
+            VALUES ('Dodge', 'Journey','$5,500', 2014, '$2,300', 'Clean Title'),
+                   ('Ford', 'Escape','Ask for Cash Price', 2018, '$2,500', 'Clean Title'),
+                   ('Kia', 'Rio','$6,900', 2015, '$1,800', 'Clean Title'),
+                   ('Buick', 'Encore','Ask for Cash Price', 2014, '$2,000', 'Clean Title'),
+                   ('Buick', 'Verano','$7,400', 2014, '$2,500', 'Clean Title'),
+                   ('Dodge', 'Dart','$6,900', 2016, '$2,000', 'Clean Title'),
+                   ('Nissan', 'Altima','$6,500', 2014, '$1,800', 'Clean Title'),
+                   ('Hyundai', 'Elantra','$5,800', 2017, '$1,500', 'Clean Title'),
+                   ('BMW', '328','Ask for Cash Price', 2015, '$3,000', 'Clean Title'),
+                   ('BMW', 'X3','Ask for Cash Price', 2017, '$3,500', 'Clean Title'),
+                   ('Mitsubishi', 'Mirage','Ask for Cash Price', 2019, '$2,000', 'Clean Title');
 
             INSERT INTO user_reviews(Rating, Review, Timestamp, review_title)
-            VALUES (5, 'perfect condition', NULL, 'Bought my car yesterday');
+            VALUES (5, 'The car was in perfect condition', '2023-09-20', 'Bought the car of my dreams'),
+             (5, 'Very good car, good condition and as described', '2023-09-20', 'Almost like new!'),
+             (5, 'The car was in perfect condition', '2023-09-22', 'Will buy again'),
+             (5, 'Smooth transaction and friendly staff', '2023-09-18', 'Excellent service'),
+             (5, 'Smooth transaction and friendly staff', '2023-09-15', 'Extremely happy with my purchase'),
+             (5, 'Car looks and drives great, very happy', '2023-09-17', 'Bought the car of my dreams');
 
             INSERT INTO contact_information (Phone, Email, Name, Last_Name)
             VALUES ('98090808', '@gofer.com', 'Michelle','Sauceda');

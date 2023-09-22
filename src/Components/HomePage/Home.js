@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./Home.css";
 import SearchBar from "../SearchBar/SearchBar"
 import ImageReel from "../ImageReel/ImageReel";
@@ -14,6 +15,15 @@ function Home() {
       <div className="inventory_reel">
         <ImageReel />
       </div>
+
+
+      <div >
+      <Link to="/appointment" className="scheduleBtn">
+      <button className="schedule">Schedule a Test Drive</button>
+          </Link>
+    </div>
+
+
 
       <div className="search_bar">
         <SearchBar />
