@@ -6,7 +6,7 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 function Review() {
-  const [reviews, setReviews] = useState({});
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     axios
@@ -24,12 +24,18 @@ function Review() {
     <div className="reviews">
       <div className="reviewsTitleBtns">
         <h3 className="reviewsTitle">Recent Reviews</h3>
-        <div className="reviewsBtns"></div>
-        <NavigateBeforeIcon />
-        <NavigateNextIcon />
+
+        <div className="reviewsBtns">
+          <NavigateBeforeIcon />
+          <NavigateNextIcon />
+        </div>
       </div>
 
-      <ReviewCard reviews={reviews} />
+      <div className="reviewsContainer">
+        {reviews.map((reviewData, index) => (
+          <ReviewCard key={index} reviewData={reviewData} />
+        ))}
+      </div>
     </div>
   );
 }

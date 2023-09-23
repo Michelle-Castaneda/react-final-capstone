@@ -92,12 +92,16 @@ module.exports = {
     .then(dbRes => res.status(200).send(dbRes[0]))
     .catch(err => res.status(500).send(err))
   },
+
+getReviews: (req, res) => {
+  sequelize.query(`
+    SELECT * FROM user_reviews;
+  `)
+  .then(dbRes => res.status(200).send(dbRes[0]))
+  .catch(err => res.status(500).send(err))
+}
+
 };
-
-
-
-
-
 
   //   createContact:(req,res) => {
   //      const {Phone,Email,Name,Last,Question} = req.body

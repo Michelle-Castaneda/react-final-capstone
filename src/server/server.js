@@ -20,10 +20,17 @@ app.get('/', async (req, res) => {
 const {
     seed,
     getCar,
+    getReviews
 } = require('./controller.js');
+
+
 
 app.post('/seed', seed);
 app.get("/car_listing", getCar);
+app.get("/user_reviews", getReviews);
+
+
+
 
 
 const PORT = process.env.SERVER_PORT || 3000;

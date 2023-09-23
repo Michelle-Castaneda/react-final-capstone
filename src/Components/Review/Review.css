@@ -1,47 +1,44 @@
 .reviews {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    padding: 10px;
     align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
     width: 100%;
-    justify-content: flex-end;
-    max-height: 400px;
-    min-width: 100px;
-    background-color: #FFFFFF;
-    z-index: 1;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
-.review_info {
-    flex: 1; 
-    margin-right: 20px; 
+.reviewsTitleBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e1e1e1;
+    margin-bottom: 20px;
 }
 
-.review_title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.reviewsTitle {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
 }
 
-.review_rating {
-    color: gold; 
-}
-.review_text,
-.review_timestamp {
-    margin-bottom: 10px;
+.reviewsBtns {
+    display: flex;
+    gap: 10px;
 }
 
-
-.interested {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF; 
-    color: #FFFFFF;
+svg {
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease; 
+    color: #333;
+    transition: color 0.3s;
 }
-.interested:hover {
-    background-color: #0056b3; 
+
+svg:hover {
+    color: #555;
 }
