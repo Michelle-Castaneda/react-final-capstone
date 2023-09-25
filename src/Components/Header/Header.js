@@ -34,6 +34,8 @@ function Header () {
     </div>
     </Link>
 
+   
+
     <div className="nav_item">
       <span className="specials">Specials</span>
       <DiscountIcon />
@@ -45,6 +47,11 @@ function Header () {
 1703 N Tower rd , Alamo, TX, United States, Texas | (956) 533-8752 </span>
     </div>
 
+    <Link to="/register" style={{textDecoration: "none"}}>
+    <div className="nav_item">
+    <span className='header_login'>Login</span>
+    </div>
+    </Link>
   
     </div>
 

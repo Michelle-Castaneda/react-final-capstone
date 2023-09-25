@@ -20,7 +20,8 @@ app.get('/', async (req, res) => {
 const {
     seed,
     getCar,
-    getReviews
+    getReviews,
+    createAccount
 } = require('./controller.js');
 
 
@@ -28,7 +29,7 @@ const {
 app.post('/seed', seed);
 app.get("/car_listing", getCar);
 app.get("/user_reviews", getReviews);
-
+app.post("/register",createAccount)
 
 
 

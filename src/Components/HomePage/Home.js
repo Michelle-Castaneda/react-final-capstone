@@ -50,33 +50,7 @@ function Home() {
 <NavigateNextIcon />
 </div>
         <div className="reviews_row">
-          <div className="review1">
-            <Review
-              review_id=""
-              title=""
-              rating={5}
-              timestamp="m"
-              review="fdfd"
-            />
-          </div>
-          <div className="review2">
-            <Review
-              review_id=""
-              title=""
-              rating={5}
-              timestamp="t"
-              review="fdfd"
-            />
-          </div>
-          <div className="review3">
-            <Review
-              review_id=""
-              title=""
-              rating={5}
-              timestamp="t"
-              review="fdfd"
-            />
-          </div>
+            <Review />  
         </div>
       </div>
       <Footer />

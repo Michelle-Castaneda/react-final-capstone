@@ -23,12 +23,12 @@ function Review() {
   return (
     <div className="reviews">
       <div className="reviewsTitleBtns">
-        <h3 className="reviewsTitle">Recent Reviews</h3>
+        {/* <h3 className="reviewsTitle">Recent Reviews</h3> */}
 
-        <div className="reviewsBtns">
+        {/* <div className="reviewsBtns">
           <NavigateBeforeIcon />
           <NavigateNextIcon />
-        </div>
+        </div> */}
       </div>
 
       <div className="reviewsContainer">

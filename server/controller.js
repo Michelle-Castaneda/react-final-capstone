@@ -19,6 +19,7 @@ module.exports = {
             DROP TABLE IF EXISTS user_reviews;
             DROP TABLE IF EXISTS contact_information;
             DROP TABLE IF EXISTS car_listing;
+            DROP TABLE IF EXISTS login;
 
             CREATE TABLE car_listing (
                 car_id SERIAL PRIMARY KEY,
@@ -32,7 +33,7 @@ module.exports = {
       
             CREATE TABLE user_reviews(
                 reviews_id SERIAL PRIMARY KEY,
-                car_id integer REFERENCES car_listing(car_id),
+                car_id integer REFERENCES login(login_id),
                 Rating integer,
                 Review text,
                 Timestamp text,
@@ -47,6 +48,13 @@ module.exports = {
                 Last_Name varchar(200),
                 car_id integer REFERENCES car_listing(car_id)
             );
+
+            CREATE TABLE login (
+              login_id SERIAL PRIMARY KEY,
+              username varchar(200),
+              password varchar(200)
+             
+          );
 
             INSERT INTO car_listing (Make, Model, Price, Year, Down_Payment, Description)
             VALUES ('Dodge', 'Journey','$5,500', 2014, '$2,300', 'Clean Title'),
@@ -71,6 +79,9 @@ module.exports = {
 
             INSERT INTO contact_information (Phone, Email, Name, Last_Name)
             VALUES ('98090808', '@gofer.com', 'Michelle','Sauceda');
+
+            INSERT INTO login(username,password)
+            VALUES('Yuliana', '123')
         `)
         .then(() => {
             console.log("DB seeded!");
@@ -99,33 +110,26 @@ getReviews: (req, res) => {
   `)
   .then(dbRes => res.status(200).send(dbRes[0]))
   .catch(err => res.status(500).send(err))
-}
+},
 
+createAccount: (req,res) => {
+  const {username,password} = req.body
+
+  sequelize.query(`
+  INSERT INTO account(username,password)
+  VALUES ('${username}', ${password})
+   RETURNING *
+        `)
+        .then(dbRes => {
+          res.status(200).send(dbRes[0])
+      })
+      .catch(err => {
+        console.log(err)
+        res.status(400).send(err)
+      })
+    }
 };
 
-  //   createContact:(req,res) => {
-  //      const {Phone,Email,Name,Last,Question} = req.body
-
-  //      sequelize.query(`
-  //       INSERT INTO tasks(task_description, task_date, task_status)
-  //       VALUES ('${task_description}', '${task_date}', '${task_status}'
-  //       ) RETURNING *
-  //       `)
-  //       .then(dbRes => {
-  //         res.status(200).send(dbRes[0])
-  //     })
-  //     .catch(err => {
-  //       console.log(err)
-  //       res.status(400).send(err)
-  //     })
-  //   },
-  //   getTasks:(req, res) => {
-  //     sequelize.query(`
-  //     SELECT * FROM tasks;
-  //     `)
-  //     .then(dbRes => res.status(200).send(dbRes[0]))
-  //     .catch(err => res.status(500).send(err))
-  // },
   // deleteTask:(req,res) => {
   //   const {task_id} = req.params
   //   console.log(task_id)
@@ -136,31 +140,6 @@ getReviews: (req, res) => {
   //   .then(dbRes => res.status(200).send(dbRes[0]))
   //   .catch(err => res.status(500).send(err))
   // },
-  //   createRoutine:(req,res) => {
-  //   const {routine_description, routine_frequency} = req.body
-
-  //   sequelize.query(`
-  //   INSERT INTO routine(routine_description, routine_frequency)
-  //   VALUES ('${routine_description}', '${routine_frequency}')
-  //   RETURNING *
-  //   `)
-  //   .then(dbRes => {
-  //     res.status(200).send(dbRes[0])
-  // })
-  // .catch(err => {
-  //   console.log(err)
-  //   res.status(400).send(err)
-  // })
-  // },
-
-
-
-
-
-
-
-
-
 
 
   // deleteRoutine:(req,res) => {
