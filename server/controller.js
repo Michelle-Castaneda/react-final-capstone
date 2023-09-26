@@ -42,10 +42,11 @@ module.exports = {
   
             CREATE TABLE contact_information (
                 contact_id SERIAL PRIMARY KEY,
-                Phone varchar(20),
-                Email varchar(50),
                 Name varchar(200),
                 Last_Name varchar(200),
+                Phone varchar(20),
+                Email varchar(50),
+                Comments text,
                 car_id integer REFERENCES car_listing(car_id)
             );
 
@@ -77,8 +78,8 @@ module.exports = {
              (5, 'Smooth transaction and friendly staff', '2023-09-15', 'Extremely happy with my purchase'),
              (5, 'Car looks and drives great, very happy', '2023-09-17', 'Bought the car of my dreams');
 
-            INSERT INTO contact_information (Phone, Email, Name, Last_Name)
-            VALUES ('98090808', '@gofer.com', 'Michelle','Sauceda');
+            INSERT INTO contact_information (Name, Last_Name, Phone, Email, Comments, car_id)
+            VALUES ('Michelle','Sauceda', '98090808', '@gofer.com', 'I want an appointment this week', );
 
             INSERT INTO login(username,password)
             VALUES('Yuliana', '123')
@@ -112,23 +113,44 @@ getReviews: (req, res) => {
   .catch(err => res.status(500).send(err))
 },
 
-createAccount: (req,res) => {
-  const {username,password} = req.body
+// createAccount: (req,res) => {
+//   const {username,password} = req.body
 
-  sequelize.query(`
-  INSERT INTO account(username,password)
-  VALUES ('${username}', ${password})
-   RETURNING *
-        `)
-        .then(dbRes => {
-          res.status(200).send(dbRes[0])
-      })
-      .catch(err => {
-        console.log(err)
-        res.status(400).send(err)
-      })
-    }
+//   sequelize.query(`
+//   INSERT INTO account(username,password)
+//   VALUES ('${username}', ${password})
+//    RETURNING *
+//         `)
+//         .then(dbRes => {
+//           res.status(200).send(dbRes[0])
+//       })
+//       .catch(err => {
+//         console.log(err)
+//         res.status(400).send(err)
+//       })
+//     },
+
+    createAppointment: (req,res) => {
+      const {Name, Last_Name, Phone, Email,  Comments, carId} = req.body
+
+sequelize.query(`
+    INSERT INTO contact_information (Name, Last_Name, Phone, Email, Comments, car_id)
+    VALUES ('${Name}', '${Last_Name}','${Phone}', '${Email}', '${Comments}', ${carId})
+    RETURNING *
+
+            `)
+            .then(dbRes => {
+              res.status(200).send(dbRes[0])
+          })
+          .catch(err => {
+            console.log(err)
+            res.status(400).send(err)
+          })
+        },
 };
+
+
+
 
   // deleteTask:(req,res) => {
   //   const {task_id} = req.params

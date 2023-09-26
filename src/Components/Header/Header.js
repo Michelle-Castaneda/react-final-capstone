@@ -25,7 +25,18 @@ function Header () {
     </Link>
 
     <div className="nav_item"style={{textDecoration: "none"}}>
-        <span className='header_financing'>Financing</span>
+      <div className="dropdown">
+      <span className="header_financing">Financing</span>
+     
+      <div className="dropdown-menu">
+      <ul className="header_financing_dropdown">
+        <li><a href="#option1">Gofer Motors LLC</a></li>
+        <li> <a href="#option2">Western Funding</a></li>
+        <li><a href="#option3">Lobel Financial</a></li>
+        <li><a href="#option4">Westlake</a></li>
+    </ul>
+    </div>
+    </div>
     </div>
   
 <Link to="/appointment" style={{textDecoration: "none"}}>

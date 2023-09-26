@@ -13,19 +13,18 @@ function Footer () {
            
             </div>
         <div className="footer_hours"></div>
-        Monday - Friday
+        <p className="hours"> Monday - Friday
         9:00am - 6:00pm
         Saturday
         9:00am - 3:00pm 
         Sunday 
         Closed
-        <div className="footer_contact"> 
-        <h2 className="footer_question">Ask a Question</h2>
+        </p>
+      
           <ContactCard />
-          <button className="footer_send">Send</button>
+          <h2 className="footer_question">Ask a Question</h2>
           </div>
-     
-        </div>
+
 
     )
 }

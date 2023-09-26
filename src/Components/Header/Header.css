@@ -5,11 +5,11 @@
 }
 
 .header_nav a:hover, .header_logo a:hover {
-    color: #3498db; 
+    color: #3498db;
 }
 
 .header_nav a:visited, .header_logo a:visited {
-    color: white; 
+    color: white;
 }
 
 .header {
@@ -20,7 +20,7 @@
     background-color: gray;
     color: white;
     flex-wrap: wrap;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header_logo {
@@ -37,11 +37,11 @@
 .nav_item {
     margin: 0 15px;
     position: relative;
-    padding: 5px 0;
+    padding: 0;
 }
 
 .nav_item:hover {
-    color: #3498db; 
+    color: #3498db;
 }
 
 .header_home, .header_inventory, .header_financing, .header_appointment, .specials {
@@ -51,18 +51,44 @@
 }
 
 .specials {
-    color: #e74c3c; 
+    color: #e74c3c;
 }
 
 .specials:hover {
-    color: #c0392b; 
+    color: #c0392b;
 }
 
 .header_goferinfo {
     font-size: 12px;
-    color: #bdc3c7; 
+    color: #bdc3c7;
     width: 100%;
     text-align: center;
     margin-top: 10px;
-    order: -1; 
+    order: -1;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.header_financing_dropdown li a {
+    text-decoration: none;   
+}
+
+.header_financing_dropdown li a:hover {
+    text-decoration: underline; 
 }

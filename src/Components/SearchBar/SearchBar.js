@@ -1,10 +1,9 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import "./SearchBar.css";
 import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
 
 function SearchBar () {
-  // const [query, setQuery] = useState('');
   const [model, setModel] = useState('');
   const [year, setYear] = useState('');
   const [make, setMake] = useState('');
