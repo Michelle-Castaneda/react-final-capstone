@@ -58,7 +58,7 @@ module.exports = {
 
             INSERT INTO car_listing (Make, Model, Price, Year, Down_Payment, Description)
             VALUES ('Dodge', 'Journey','$5,500', 2014, '$2,300', 'Clean Title'),
-                   ('Ford', 'Escape','Ask for Cash Price', 2018, '$2,500', 'Clean Title'),
+                   ('Ford', 'Escape','Ask for Cash Price', 2018, '$2,500', 'Clean Title')
                    ('Kia', 'Rio','$6,900', 2015, '$1,800', 'Clean Title'),
                    ('Buick', 'Encore','Ask for Cash Price', 2014, '$2,000', 'Clean Title'),
                    ('Buick', 'Verano','$7,400', 2014, '$2,500', 'Clean Title'),

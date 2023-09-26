@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./Inventory.css";
 import InventoryCard from "../InventoryCard/InventoryCard";
 import axios from 'axios';
-import Footer from "../Footer/Footer"
+import SearchBar from '../SearchBar/SearchBar';
 
 function Inventory() {
   const [cars, setCars] = useState([]);
@@ -25,13 +25,17 @@ function Inventory() {
     <div className="completeInventory">
       <h3 className="advancedTitle">What vehicle are you searching for?</h3>
       
-      <div className="advancedSearch">
+<SearchBar />
+
+      {/* <div className="advancedSearch">
         <input type="text" placeholder="Make" />
         <input type="text" placeholder="Model" />
-        <input type="text" placeholder="Type" />
         <input type="text" placeholder="Year" />
         <button className="advancedBtn">Search</button>
-      </div>
+      </div> */}
+
+
+
 
       <div className="cardContainer">
         {cars.map(car => (
