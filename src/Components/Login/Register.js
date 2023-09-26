@@ -40,7 +40,7 @@ const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(username,password)
         try {
-            const response = await axios.post("/register", {
+            const response = await axios.post("http://localhost:4000/register", {
                 username,
                 password
             });
@@ -56,7 +56,7 @@ const handleSubmit = async (e) => {
 return (
 successMessage ? (
     <div>
-    <h1>Signup successful! Welcome to Gofer Motors! </h1>
+    <h1>Signup successful! Welcome to Gofer Motors LLC! </h1>
     <p>
     <a href="#">Sign In </a>
     </p>
@@ -87,7 +87,7 @@ successMessage ? (
         </form>
 
         <p>Already Registered? <br/>
-        <a href="#">Sign In </a>
+        <a href="#" >Sign In </a>
         </p>
     </div>
     )

@@ -6,7 +6,7 @@ const {User} = require('../models/user');
 
 const createToken = (username, id) => {
     return jwt.sign(
-        { username, password },
+        { username, id },
         SECRET,
         { expiresIn: '2 days' }
     ); 

@@ -21,7 +21,7 @@ const {
     seed,
     getCar,
     getReviews,
-    createAccount
+    createAccount,
 } = require('./controller.js');
 
 
@@ -29,7 +29,7 @@ const {
 app.post('/seed', seed);
 app.get("/car_listing", getCar);
 app.get("/user_reviews", getReviews);
-app.post("/register",createAccount)
+app.post("/authentication",createAccount)
 
 
 

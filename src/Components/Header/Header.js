@@ -47,7 +47,7 @@ function Header () {
 1703 N Tower rd , Alamo, TX, United States, Texas | (956) 533-8752 </span>
     </div>
 
-    <Link to="/register" style={{textDecoration: "none"}}>
+    <Link to="/authentication" style={{textDecoration: "none"}}>
     <div className="nav_item">
     <span className='header_login'>Login</span>
     </div>

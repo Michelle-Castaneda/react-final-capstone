@@ -141,17 +141,6 @@ createAccount: (req,res) => {
   //   .catch(err => res.status(500).send(err))
   // },
 
-
-  // deleteRoutine:(req,res) => {
-  //   const {routine_id} = req.params
-
-  //   sequelize.query(`
-  //       DELETE FROM routine
-  //       WHERE routine_id = ${routine_id};
-  //   `)
-  //   .then(dbRes => res.status(200).send(dbRes[0]))
-  //   .catch(err => res.status(500).send(err))
-  // },
   // updateTask:(req,res) => {
   //   const taskId = req.params.task_id;
   //   const {task_description, task_date, task_status} = req.body;

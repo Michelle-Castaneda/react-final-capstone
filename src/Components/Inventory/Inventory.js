@@ -41,8 +41,6 @@ function Inventory() {
         ))}
     
       </div>
-
-      <Footer />
     </div>
   );
 }

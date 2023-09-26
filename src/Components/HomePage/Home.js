@@ -53,7 +53,6 @@ function Home() {
             <Review />  
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
