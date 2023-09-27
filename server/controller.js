@@ -19,8 +19,7 @@ module.exports = {
             DROP TABLE IF EXISTS user_reviews;
             DROP TABLE IF EXISTS contact_information;
             DROP TABLE IF EXISTS car_listing;
-            DROP TABLE IF EXISTS login;
-
+            
             CREATE TABLE car_listing (
                 car_id SERIAL PRIMARY KEY,
                 Make varchar(100),
@@ -33,12 +32,11 @@ module.exports = {
       
             CREATE TABLE user_reviews(
                 reviews_id SERIAL PRIMARY KEY,
-                car_id integer REFERENCES login(login_id),
                 Rating integer,
                 Review text,
                 Timestamp text,
                 review_title varchar(70)
-            );
+                );
   
             CREATE TABLE contact_information (
                 contact_id SERIAL PRIMARY KEY,
@@ -47,19 +45,13 @@ module.exports = {
                 Phone varchar(20),
                 Email varchar(50),
                 Comments text,
-                car_id integer REFERENCES car_listing(car_id)
+                car_id integer,
+                FOREIGN KEY(car_id) REFERENCES car_listing(car_id)
             );
-
-            CREATE TABLE login (
-              login_id SERIAL PRIMARY KEY,
-              username varchar(200),
-              password varchar(200)
-             
-          );
 
             INSERT INTO car_listing (Make, Model, Price, Year, Down_Payment, Description)
             VALUES ('Dodge', 'Journey','$5,500', 2014, '$2,300', 'Clean Title'),
-                   ('Ford', 'Escape','Ask for Cash Price', 2018, '$2,500', 'Clean Title')
+                   ('Ford', 'Escape','Ask for Cash Price', 2018, '$2,500', 'Clean Title'),
                    ('Kia', 'Rio','$6,900', 2015, '$1,800', 'Clean Title'),
                    ('Buick', 'Encore','Ask for Cash Price', 2014, '$2,000', 'Clean Title'),
                    ('Buick', 'Verano','$7,400', 2014, '$2,500', 'Clean Title'),
@@ -79,10 +71,8 @@ module.exports = {
              (5, 'Car looks and drives great, very happy', '2023-09-17', 'Bought the car of my dreams');
 
             INSERT INTO contact_information (Name, Last_Name, Phone, Email, Comments, car_id)
-            VALUES ('Michelle','Sauceda', '98090808', '@gofer.com', 'I want an appointment this week', );
+            VALUES ('Michelle','Sauceda', '98090808', '@gofer.com', 'I want an appointment this week',1);
 
-            INSERT INTO login(username,password)
-            VALUES('Yuliana', '123')
         `)
         .then(() => {
             console.log("DB seeded!");
@@ -131,11 +121,11 @@ getReviews: (req, res) => {
 //     },
 
     createAppointment: (req,res) => {
-      const {Name, Last_Name, Phone, Email,  Comments, carId} = req.body
+      const {Name, Last_Name, Phone, Email,  Comments, car_id} = req.body
 
 sequelize.query(`
     INSERT INTO contact_information (Name, Last_Name, Phone, Email, Comments, car_id)
-    VALUES ('${Name}', '${Last_Name}','${Phone}', '${Email}', '${Comments}', ${carId})
+    VALUES ('${Name}', '${Last_Name}','${Phone}', '${Email}', '${Comments}', ${car_id})
     RETURNING *
 
             `)
