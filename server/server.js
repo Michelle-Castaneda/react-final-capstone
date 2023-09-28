@@ -26,6 +26,14 @@ const {
 } = require('./controller.js');
 
 
+// const transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//         user: 'YOUR_GMAIL@gmail.com',
+//         pass: 'YOUR_PASSWORD'
+//     }
+// });
+
 
 app.post('/seed', seed);
 app.get("/car_listing", getCar);

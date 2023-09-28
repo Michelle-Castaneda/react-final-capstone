@@ -4,6 +4,7 @@ import "./Review.css";
 import axios from "axios";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import reviews_animation from "./reviews_animation.gif"
 
 function Review() {
   const [reviews, setReviews] = useState([]);
@@ -22,6 +23,7 @@ function Review() {
 
   return (
     <div className="reviews">
+      <img src={reviews_animation} />
       <div className="reviewsTitleBtns">
         {/* <h3 className="reviewsTitle">Recent Reviews</h3> */}
 

@@ -1,59 +1,40 @@
-.header_nav a, .header_logo a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.header_nav a:hover, .header_logo a:hover {
-    color: #3498db;
-}
-
-.header_nav a:visited, .header_logo a:visited {
-    color: white;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: #EFECE5;
-    color: black;
+    padding: 10px 30px;
+    background-color: #333; 
+    color: #ffffff;
     flex-wrap: wrap;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header_logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    max-width: 250px;
+    height: auto;
+    transition: opacity 0.3s ease;
+    margin-top: -30px;
 }
 
-.header_logo img {
-    max-width: 220px;
-    height: auto;
+.header_logo:hover {
+    opacity: 0.8; 
 }
 
 .nav_item {
     margin: 0 15px;
     position: relative;
-    padding: 0;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    color:#ffffff;
 }
 
 .nav_item:hover {
-    color: gold;
+    color: #f39c12; 
 }
-
-.header_home, .header_inventory, .header_financing, .header_appointment, .specials {
-    cursor: pointer;
-    transition: color 0.3s ease;
-    font-weight: 600;
-}
-
 
 .header_goferinfo {
-    font-size: 12px;
-    color: #bdc3c7;
+    font-size: 14px;
+    color: #a3a3a3; 
     width: 100%;
     text-align: center;
     margin-top: 10px;
@@ -62,26 +43,62 @@
 
 .dropdown {
     position: relative;
+    width: fit-content;
+    list-style-type: none; 
+    padding-left: 0; 
 }
 
 .dropdown-menu {
-    display: none; 
+    display: none;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: #444;
+    border: 1px solid #555; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; 
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+    min-width: 170px;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+.header_financing_dropdown {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
 }
 
 .header_financing_dropdown li a {
-    text-decoration: none;   
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    padding: 5px 10px;
+    margin: 0;  
 }
 
 .header_financing_dropdown li a:hover {
-    text-decoration: underline; 
+    background-color: #f39c12; 
+}
+
+.header_login {
+    padding: 5px 20px;
+    /* background-color: #f39d1269;  */
+    border-radius: 5px;
+    cursor: pointer;
+    color:#ffffff;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header_login:hover {
+    background-color: #e67d2248;
 }
