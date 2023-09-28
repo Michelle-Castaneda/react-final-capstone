@@ -5,6 +5,8 @@ import './AppointmentCard.css'
 function AppointmentCard () {
     const [carListings, setCarListings] = useState([]);
     const [selectedCar, setSelectedCar] = useState('');
+    const [successMessage, setSuccessMessage] = useState("");
+
     const [formData, setFormData] = useState({
         name: '',
         lastName: '',
@@ -44,6 +46,17 @@ function AppointmentCard () {
         axios.post("http://localhost:4000/contact_information", appointmentData)
             .then(response => {
                 console.log("Appointment data sent:", response.data);
+
+                setFormData({
+                    name: '',
+                    lastName: '',
+                    phone: '',
+                    email: '',
+                    comments: ''
+                });
+                setSelectedCar('');
+                
+                setSuccessMessage("Your appointment request was sent successfully!");
             })
             .catch(error => {
                 console.error("Error post request to appointment data:", error.response.data);
@@ -98,6 +111,9 @@ function AppointmentCard () {
                      {car.make} {car.model} ({car.year})</option>
                 ))}
             </select>
+            {
+    successMessage && <p className="successMessage">{successMessage}</p>
+}
 
             <button className="appointment_send" onClick={handleSubmit}>Send</button>
         </div>

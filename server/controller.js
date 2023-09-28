@@ -60,6 +60,7 @@ module.exports = {
                    ('Hyundai', 'Elantra','$5,800', 2017, '$1,500', 'Clean Title'),
                    ('BMW', '328','Ask for Cash Price', 2015, '$3,000', 'Clean Title'),
                    ('BMW', 'X3','Ask for Cash Price', 2017, '$3,500', 'Clean Title'),
+                   ('Range Rover', 'Evoque', 'Ask for Cash Price', 2013, '$3,500', 'Clean Title'),
                    ('Mitsubishi', 'Mirage','Ask for Cash Price', 2019, '$2,000', 'Clean Title');
 
             INSERT INTO user_reviews(Rating, Review, Timestamp, review_title)
@@ -67,7 +68,7 @@ module.exports = {
              (5, 'Very good car, good condition and as described', '2023-09-20', 'Almost like new!'),
              (5, 'The car was in perfect condition', '2023-09-22', 'Will buy again'),
              (5, 'Smooth transaction and friendly staff', '2023-09-18', 'Excellent service'),
-             (5, 'Smooth transaction and friendly staff', '2023-09-15', 'Extremely happy with my purchase'),
+             (5, 'Pleasant transaction with cordial staff', '2023-09-15', 'Extremely happy with my purchase'),
              (5, 'Car looks and drives great, very happy', '2023-09-17', 'Bought the car of my dreams');
 
             INSERT INTO contact_information (Name, Last_Name, Phone, Email, Comments, car_id)

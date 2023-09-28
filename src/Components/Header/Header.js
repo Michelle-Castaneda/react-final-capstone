@@ -48,8 +48,18 @@ function Header () {
    
 
     <div className="nav_item">
-      <span className="specials">Specials</span>
+    <div className="dropdown">
+      <span className="header_specials">Specials</span>
       <DiscountIcon />
+        <div className="dropdown-menu">
+      <ul className="header_financing_dropdown">
+        <li><a href="#option1">Cash Price</a></li>
+        <li> <a href="#option2">20% Off</a></li>
+        <li><a href="#option3">Ford Clearance</a></li>
+        <li><a href="#option4">Bonus Cash</a></li>
+    </ul>
+    </div>
+    </div>
     </div>
 
 
