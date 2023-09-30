@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './ContactCard.css'
 
-function AppointmentCard () {
+function ContactCard () {
     const [carListings, setCarListings] = useState([]);
     const [selectedCar, setSelectedCar] = useState('');
     const [successMessage, setSuccessMessage] = useState("");
@@ -56,7 +56,7 @@ function AppointmentCard () {
                 });
                 setSelectedCar('');
                 
-                setSuccessMessage("Your appointment request was sent successfully!");
+                setSuccessMessage("Your questions have been sent");
             })
             .catch(error => {
                 console.error("Error post request to appointment data:", error.response.data);
@@ -64,43 +64,50 @@ function AppointmentCard () {
     };
 
     return (
-        <div className="appointmentCard_container"> 
+        <div className="contactCard_container"> 
+        <h2 className="footer_question">Ask a Question</h2>
+            <div className="input-group">
             <input 
-                className="appointment_name" 
+                className="contact_name" 
                 placeholder="Name" 
                 name="name" 
                 value={formData.name} 
                 onChange={handleInputChange}
             />
             <input 
-                className="appointment_last" 
+                className="contact_last" 
                 placeholder="Last Name" 
                 name="lastName" 
                 value={formData.lastName}
                 onChange={handleInputChange}
             />
+             </div>
+
+<div className="secondInput">
             <input 
-                className="appointment_phone" 
+                className="contact_phone" 
                 placeholder="Phone Number" 
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
             />
             <input 
-                className="appointment_email" 
+                className="contact_email" 
                 placeholder="Email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
             />
+           
+
             <input 
-                className="appointment_questions" 
-                placeholder="Comments"
+                className="contact_questions" 
+                placeholder="I'm interested in..."
                 name="comments"
                 value={formData.comments}
                 onChange={handleInputChange}
             />
-            
+            </div>
             <select 
                 value={selectedCar}
                 onChange={(e) => setSelectedCar(e.target.value)}
@@ -112,12 +119,12 @@ function AppointmentCard () {
                 ))}
             </select>
             {
-    successMessage && <p className="successMessage">{successMessage}</p>
+    successMessage && <p className="contact_successMessage">{successMessage}</p>
 }
 
-            <button className="appointment_send" onClick={handleSubmit}>Send</button>
+            <button className="contact_send" onClick={handleSubmit}>Send</button>
         </div>
     )
 };
 
-export default AppointmentCard;
+export default ContactCard;

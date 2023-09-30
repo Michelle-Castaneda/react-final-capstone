@@ -1,63 +1,110 @@
-.appointmentCard_container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 450px;
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #F39C12;
+    --light-gray: #ECF0F1;
+    --dark-gray: #7F8C8D;
+    --error-red: #E74C3C;
+    --success-green: #2ECC71;
+    --transition-speed: 0.3s;
+}
+
+.contactCard_container {
+    width: 90%;
+    max-width: 400px;
     margin: 20px auto;
-    padding: 30px;
-    border: 1px solid #e1e1e1;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+    padding: 20px 25px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
 }
 
-.appointmentCard_container input,
-.appointmentCard_container select,
-.appointmentCard_container button {
-    padding: 12px 15px;
+.footer_question {
+    font-size: 1.8rem;
     margin-bottom: 15px;
-    border: 1px solid #d9d9d9;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: center;
 }
 
-.appointmentCard_container input:focus,
-.appointmentCard_container select:focus {
-    border-color: #007BFF;
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    flex: 1;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.contact_name, .contact_last, .contact_phone, .contact_email, .contact_questions {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 8px;
+    background-color: var(--light-gray);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed) ease, box-shadow 0.2s ease;
     outline: none;
 }
 
-.appointmentCard_container button {
-    background-color: #007BFF;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.contact_name:focus, .contact_last:focus, .contact_phone:focus, .contact_email:focus, .contact_questions:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.4);
+    
 }
 
-.appointmentCard_container button:hover {
-    background-color: #0056b3;
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 8px;
+    background-color: var(--light-gray);
+    font-size: 1rem;
+    outline: none;
 }
 
-.successMessage {
-    color: #28A745;
-    margin-bottom: 15px;
+.contact_successMessage {
+    color: var(--success-green);
+    font-weight: 600;
+    margin-bottom: 12px;
     text-align: center;
-    font-weight: bold;
 }
 
-/* Placeholders */
-.appointmentCard_container input::placeholder {
-    color: #b0b0b0;
+.contact_send {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease-in-out, transform 0.2s ease-in-out;
 }
 
-/* You can further style individual fields if needed */
-.appointment_name,
-.appointment_last,
-.appointment_phone,
-.appointment_email,
-.appointment_questions {
-    /* Individual styles for the fields if needed */
+.contact_send:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+.contact_send:focus {
+    outline: none;
+}
+
+.reviewAndContact_container {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: start; 
+    gap: 20px;
+}
+
+.secondInput {
+    margin-right: 29px;
 }

@@ -69,7 +69,7 @@ module.exports = {
              (5, 'The car was in perfect condition', '2023-09-22', 'Will buy again'),
              (5, 'Smooth transaction and friendly staff', '2023-09-18', 'Excellent service'),
              (5, 'Pleasant transaction with cordial staff', '2023-09-15', 'Extremely happy with my purchase'),
-             (5, 'Car looks and drives great, very happy', '2023-09-17', 'Bought the car of my dreams');
+             (5, 'Car looks and drives great, very happy', '2023-09-17', 'The best car I've ever bought');
 
             INSERT INTO contact_information (Name, Last_Name, Phone, Email, Comments, car_id)
             VALUES ('Michelle','Sauceda', '98090808', '@gofer.com', 'I want an appointment this week',1);

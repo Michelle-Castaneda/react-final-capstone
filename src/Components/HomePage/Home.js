@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Ford_Escape from "../ImageReel/Ford_Escape.jpg";
+import ContactCard from "../ContactCard/ContactCard";
 
 function Home() {
   return (
@@ -49,9 +50,15 @@ function Home() {
       </div>
 
 
-        <div className="reviews_row">
-          <Review />
-        </div>
+      <div className="reviewAndContact_container">
+    <div className="reviews_row">
+        <Review />
+    </div>
+    <div className="Home_contactCard">
+        <ContactCard />
+    </div>
+</div>
+
       </div>
   );
 }
