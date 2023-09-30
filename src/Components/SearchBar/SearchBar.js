@@ -64,7 +64,7 @@ function SearchBar () {
         onChange={(e) => setYear(e.target.value)}
       />
 
-      <SearchIcon className="search_icon" onClick={handleSearch} />
+<SearchIcon className="search_icon" onClick={handleSearch} />
 
         {cars.map(car => {
           const carImage = require(`../ImageReel/${car.make}_${car.model}.jpg`)

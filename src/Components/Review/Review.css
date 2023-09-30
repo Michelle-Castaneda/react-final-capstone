@@ -1,13 +1,34 @@
-.reviews {
+.outerReviewsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.leftContent {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    gap: 15px;  /* Adjust as necessary */
+}
+.reviewsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     padding: 20px;
     background-color: #f7f7f7;
     border-radius: 10px;
     width: 100%;
     max-width: 800px;
     margin: 20px auto;
+    gap: 20px;
+    overflow-x: auto;
 }
 
 .reviewsTitleBtns {

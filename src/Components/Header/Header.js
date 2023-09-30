@@ -82,7 +82,7 @@ function Header() {
       </div>
 
       <span className="header_goferinfo">
-      <BsFillGeoAltFill/> 1703 N Tower Rd Alamo, Texas, United States  | <PhoneAndroidIcon/>(956) 533-8752 
+      <BsFillGeoAltFill/> 1703 N Tower Rd Alamo, Texas, United States   <PhoneAndroidIcon/>(956) 258-5021
       </span>
 
       <Link to="/authentication" style={{ textDecoration: "none" }}>

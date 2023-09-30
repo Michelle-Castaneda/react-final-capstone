@@ -1,36 +1,63 @@
-.footer_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 20px;
-    color: #fff;
-    font-family: Arial, sans-serif;
-}
-
-.footerGofer, .footer_hours, .footer_contact {
-    flex: 1;
-    padding: 10px;
-}
-
-.footerGofer {
+.appointmentCard_container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
-.footer_phone, .footer_address {
-    margin-bottom: 10px;
+.appointmentCard_container input,
+.appointmentCard_container select,
+.appointmentCard_container button {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
 }
 
-.footer_hours {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.appointmentCard_container input:focus,
+.appointmentCard_container select:focus {
+    border-color: #007BFF;
+    outline: none;
 }
 
-.footer_contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.appointmentCard_container button {
+    background-color: #007BFF;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.appointmentCard_container button:hover {
+    background-color: #0056b3;
+}
+
+.successMessage {
+    color: #28A745;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Placeholders */
+.appointmentCard_container input::placeholder {
+    color: #b0b0b0;
+}
+
+/* You can further style individual fields if needed */
+.appointment_name,
+.appointment_last,
+.appointment_phone,
+.appointment_email,
+.appointment_questions {
+    /* Individual styles for the fields if needed */
 }

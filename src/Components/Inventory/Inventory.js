@@ -26,17 +26,6 @@ function Inventory() {
       <h3 className="advancedTitle">What vehicle are you searching for?</h3>
       
 <SearchBar />
-
-      {/* <div className="advancedSearch">
-        <input type="text" placeholder="Make" />
-        <input type="text" placeholder="Model" />
-        <input type="text" placeholder="Year" />
-        <button className="advancedBtn">Search</button>
-      </div> */}
-
-
-
-
       <div className="cardContainer">
         {cars.map(car => (
           

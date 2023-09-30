@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import ContactCard from "../ContactCard/ContactCard"
+import FooterCard from "../FooterCard/FooterCard"
 
 function Footer () {
     return (
@@ -9,6 +9,7 @@ function Footer () {
 <div className="footer_phone"></div>
             y.gofer@gofermotors.com
             sales@gofermotors.com
+            (956) 258-5021
         <div className="footer_address"> 1703 N Tower rd , Alamo, TX, United States, Texas </div>
            
             </div>
@@ -21,7 +22,7 @@ function Footer () {
         Closed
         </p>
       
-          <ContactCard />
+          <FooterCard />
           <h2 className="footer_question">Ask a Question</h2>
           </div>
 

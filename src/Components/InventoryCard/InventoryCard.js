@@ -3,7 +3,7 @@ import "./InventoryCard.css"
 
 
 function InventoryCard ({ car }) {
-    console.log(car.make)
+    // console.log(car.make)
 
     const carImage = require(`../ImageReel/${car.make}_${car.model}.jpg`)
     
